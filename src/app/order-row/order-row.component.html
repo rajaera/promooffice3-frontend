@@ -1,0 +1,74 @@
+<mat-expansion-panel [expanded]="step === rowNumber" (opened)="setStep(rowNumber)" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+           ({{rowNumber}}) Order Row Component
+        </mat-panel-title>
+        <mat-panel-description>
+          Organise your data here
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="order-row-field-container">
+        <div>
+            <div>
+                <form [formGroup]="orderMianItemFormGroup" >
+                <mat-form-field class="order-row-main-item-column">
+                    <mat-label>Main Item</mat-label>
+                    <input matInput type="text" formControlName="mainItem">
+                </mat-form-field>
+              
+                <mat-form-field class="order-row-main-item-desc-column">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" formControlName="description">
+                </mat-form-field>
+                <mat-form-field class="order-row-main-item-acc-column">
+                    <mat-label>Account</mat-label>
+                    <input matInput type="text" formControlName="account">
+                </mat-form-field>
+                <mat-form-field class="order-row-main-item-qty-column">
+                    <mat-label>Quanitity</mat-label>
+                    <input matInput type="number" min="1" formControlName="quantity">
+                </mat-form-field>
+                <mat-form-field class="order-row-main-item-cost-column">
+                    <mat-label>Cost</mat-label>
+                    <input matInput type="text" formControlName="costPrice">
+                </mat-form-field>
+                <mat-form-field class="order-row-main-item-markup-column">
+                    <mat-label>Mark Up Rate</mat-label>
+                    <input matInput type="text" formControlName="markupRate">
+                </mat-form-field>        
+                <mat-form-field class="order-row-main-item-price-column">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="text" formControlName="sellPrice">
+                </mat-form-field>        
+                <mat-form-field class="order-row-main-item-price-amount-column">
+                    <mat-label>Line Amount</mat-label>
+                    <input matInput type="text" formControlName="lineAmount">
+                </mat-form-field>
+                <mat-icon>expand_less</mat-icon>
+            </form>
+            </div>
+            <div>
+                <div>            
+                    <div>
+                        <mat-tab-group animationDuration="0ms">
+                            <mat-tab label="Item Description">Item Description</mat-tab>
+                            <mat-tab label="Customisation">Customisation</mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+                <div> 
+                    <div>Sub Row Components</div>           
+                    <div>
+                        <app-sub-item-row></app-sub-item-row>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        
+    </div>
+    <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+</mat-expansion-panel>

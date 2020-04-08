@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-content>
+        <app-order-header></app-order-header>
+    </mat-card-content>
+    <mat-card-content class="order-row-container">
+        <div class="order-row-operation-sec">
+            <button mat-raised-button class="add-new-order-row-btn" (click)="addNewRow()">Add New Row</button>
+        </div>
+       <div class="order-row-sec">
+        <mat-accordion class="example-headers-align">
+            <app-order-row [lineItem]="row" *ngFor="let row of orderRows"></app-order-row>
+        </mat-accordion>
+        
+       </div>
+    </mat-card-content>
+</mat-card>

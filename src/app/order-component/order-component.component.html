@@ -1,0 +1,14 @@
+<app-site-header></app-site-header>
+<div class="order-wrapper-content">
+    <h1 class="order-step-title">Order Steps</h1>
+    <div class="order-step-navigator">
+        <a [routerLink]="['./quote-form']">Quotation</a>&nbsp;-------------&nbsp;
+        <a>Sales Order</a>&nbsp;-------------&nbsp;
+        <a>Job</a>&nbsp;-------------&nbsp;
+        <a>Purchase Order</a>&nbsp;-------------&nbsp;
+        <a>Invoice</a>&nbsp;-------------&nbsp;
+        <a>Delivery Order</a>&nbsp;
+    </div>
+    
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,150 @@
+<mat-tab-group animationDuration="0ms" class="order-header-tab-group">
+    <mat-tab label="Mandatory Headers" class="order-header-tab">
+        <div class="order-main-required-fields">            
+            <mat-form-field>
+                <mat-label>Select Customer</mat-label>
+                <mat-select>
+                  <mat-option value="10px">Gunweb systems</mat-option>
+                  <mat-option value="12px">Promooffice</mat-option>
+                  <mat-option value="14px">Aranxa</mat-option>
+                  <mat-option value="16px">Goodgear</mat-option>                  
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
+              </mat-form-field>
+              
+              
+              
+              <mat-form-field class="example-full-width">
+                <mat-label>Due Date</mat-label>
+                <input matInput [matDatepicker]="pickerdue">
+                <mat-datepicker-toggle matSuffix [for]="pickerdue"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #pickerdue></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Quote #</mat-label>
+                <input matInput placeholder="Q000001">
+              </mat-form-field>          
+              <mat-form-field class="example-full-width">
+                <mat-label>Quote Name</mat-label>
+                <input matInput placeholder="Test Quote">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Reference</mat-label>
+                <input matInput>
+              </mat-form-field>
+        </div>
+    </mat-tab>
+    <mat-tab label="Optional Headers" class="order-header-tab">
+        <div class="order-optional-header-fields">
+            <span >
+                <label>Salesperson</label>
+                <select class="order-header-inline-field">
+                    <option>Select Salesperson</option>
+                    <option>Gunweb systems</option>
+                    <option>Promooffice</option>
+                </select>
+            </span>
+            <span>
+                <label>Estimate</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Probability</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Comment</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+        </div>
+    </mat-tab>
+    <mat-tab label="Office Address" class="order-header-tab">
+        <div class="order-optional-header-fields">                    
+            <span>
+                <label>Contact Name</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Office Phone</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Mobile Phone</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Email</label>
+                <input type="email" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Address</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>City</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Suburb</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>State</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Postal Code</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+        </div>
+    </mat-tab>
+    <mat-tab label="Shipping Address" class="order-header-tab">
+        <div class="order-optional-header-fields">                    
+            <span>
+                <label>Contact Name</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Send Via</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Office Phone</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Mobile Phone</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Email</label>
+                <input type="email" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Address</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>City</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Suburb</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>State</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+            <span>
+                <label>Postal Code</label>
+                <input type="text" class="order-header-inline-field">
+            </span>
+        </div>
+    </mat-tab>
+  </mat-tab-group>
