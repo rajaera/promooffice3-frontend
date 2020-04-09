@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LineItem } from '../model/line-item';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { LineItemType } from '../enum/line-item-type.enum';
+import { SubItem } from '../model/sub-item';
 
 @Component({
   selector: 'app-order-row',
@@ -47,6 +49,28 @@ export class OrderRowComponent implements OnInit {
       },
       
     );
+  }
+
+
+  addSubRow() {
+    let subItem = new SubItem();
+    subItem.accountCode = '1000-01';
+    subItem.costPrice = 2.33;
+    subItem.costPriceAmount = 2330;
+    subItem.data = {};
+    subItem.description = 'Embroidery 1 position up to 10000 stitches';
+    subItem.itemCode = 'EMB00001';
+    subItem.itemCustomise;
+    subItem.markUpPercentage = 10;
+    subItem.markUpRate = 1.1;
+    subItem.orderSequence = 1;
+    subItem.quantity = 1000;
+    subItem.sellPrice = 2.563;
+    subItem.sellPriceAmount = 2563;
+    subItem.type = LineItemType.DECORATION;
+    subItem.uuid = '';
+
+    this.lineItem.subItems.push(subItem);
   }
   
 

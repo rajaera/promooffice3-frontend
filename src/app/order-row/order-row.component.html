@@ -58,9 +58,12 @@
                     </div>
                 </div>
                 <div> 
-                    <div>Sub Row Components</div>           
+                    <div class="add-new-sub-row-option-div">
+                        <button mat-raised-button class="add-new-sub-row-btn" (click)="addSubRow()">Add Sub Item</button>
+                        <p>Sub Row Components</p>
+                    </div>           
                     <div>
-                        <app-sub-item-row></app-sub-item-row>
+                        <app-sub-item-row [subLineItem]="subrow" *ngFor="let subrow of lineItem.subItems"></app-sub-item-row>
                     </div>
                 </div>
                
